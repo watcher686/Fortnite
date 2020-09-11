@@ -1,0 +1,233 @@
+/********面板**********/
+#myPanel p{
+    text-indent: 2em;
+}
+/**********************/
+
+
+/*******heater*********/
+#header{
+	position: relative;
+    text-shadow: none;
+    font-size: 1.5em;
+    font-family: "华文琥珀";
+}
+#header a{
+    top: 1em;
+    }
+#header a:focus {
+	box-shadow: none;
+}
+#header a::after{
+    background-size: 100%;
+    border-radius: 100%;
+    width:25px;
+    height:25px;
+    background-color: transparent;
+    background-image: url(../img/Fortnite.jpg);
+}
+/*********************/
+
+/********轮播*********/
+.ui-content{
+    padding: 0px!important;
+}
+#lunbo {
+	position: relative;
+}
+#imghe {
+	width: 100%;
+	opacity: 0;
+}
+
+#igs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	width: 100%;
+	font-size: 0px;
+}
+
+#igs img {
+	width: 100%;
+}
+.ui-alt-icon.ui-btn:after{
+	background-color: #e0eefe!important;
+}
+
+#tabs ul {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	z-index: 99;
+	padding: 5px;
+	border-radius: 10px;
+	display: flex;
+	margin-bottom: 5px;
+}
+
+#tabs li {
+	list-style-type: none;
+	text-align: center;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: gainsboro;
+	color: white;
+	margin: 0px 5px;
+}
+
+#tabs .now {
+	background-color: gray;
+}
+/************************/
+
+/***********标题样式**************/
+.bt{
+    border-left: 5px solid #31A0E0;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+/*****************************/
+
+/*******Tab栏自动切换**********/
+#box {
+	text-shadow: none;
+}
+#box ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#title {
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	display: flex;
+	overflow: hidden;
+}
+#title li {
+	display: block;
+	box-sizing: border-box;
+	width: calc(100% / 2);
+	text-align: center;
+	padding: 10px 0px;
+	background-color: white;
+	color: black;
+	border-right: 1px solid white;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+#title .action {
+	border-bottom: 2px solid #31a0e0;
+	color: #31a0e0;
+}
+#con {
+	padding: 0.5em 0px;
+}
+#con>li {
+	display: none;
+}
+#con .now {
+	display: block;
+}
+#con .now>p{
+    text-indent: 2em;
+    font-size: 1.05em;
+    margin:10px;
+}
+/**********************/
+
+/**********资讯*************/
+#main>div:nth-of-type(3)>div a{
+    display: block;
+    margin: 8px;
+    text-decoration: none;
+    color: #000000;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color:#fff;
+}
+#main>div:nth-of-type(3)>div a>img{
+    width: 100%;
+}
+#main>div:nth-of-type(3)>div a>p{
+    margin:10px;
+    text-shadow:none;
+    font-size: 1em;
+}
+#main>div:nth-of-type(3)>div a>p:nth-of-type(2){
+    color: #DCDCDC;
+    font-size: 0.8em;
+}
+/***********************/
+
+
+/*******联动************/
+#main>div:nth-of-type(4) h3{
+    margin: 5px;
+    
+}
+#main>div:nth-of-type(4) a{
+   display: block;
+   text-decoration: none;
+   margin: 10px;
+   border: 2px solid #DCDCDC;
+   border-radius:15px;
+   overflow: hidden;
+}
+#main>div:nth-of-type(4) img{
+    width: 100%;
+}
+/**********************/
+
+/*******footer导航栏*********/
+
+#footer {
+    position: fixed;
+	overflow: hidden;
+	border-top: 1px solid gray;
+}
+
+#navbar a,
+#footer a {
+	border: none;
+	margin: 0px;
+	float: left;
+	padding: 3em 0px 5px 0px;
+	width: calc(100% / 3);
+}
+
+#footer .ui-btn-icon-top:after,
+#navbar .ui-btn-icon-top:after {
+	margin-left: -16px;
+}
+
+#footer a:nth-child(1)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer a:nth-child(2)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer a:nth-child(3)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer .ui-btn-icon-top:after,
+#navbar .ui-btn-icon-top:after {
+	top: 2px;
+}

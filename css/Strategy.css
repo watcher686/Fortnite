@@ -1,0 +1,210 @@
+/********面板**********/
+#myPanel p{
+    text-indent: 2em;
+}
+/**********************/
+
+/*******heater*********/
+#header{
+	position: relative;
+    text-shadow: none;
+    font-size: 1.5em;
+    font-family: "华文琥珀";
+}
+#header a{
+    top: 1em;
+    }
+#header a:focus {
+	box-shadow: none;
+}
+#header a::after{
+    background-size: 100%;
+    border-radius: 100%;
+    width:25px;
+    height:25px;
+    background-color: transparent;
+    background-image: url(../img/Fortnite.jpg);
+}
+/*********************/
+
+/***********标题样式**************/
+.bt{
+    border-left: 5px solid #31A0E0;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+/*****************************/
+
+/*******Tab栏自动切换1**********/
+#box {
+	text-shadow: none;
+}
+#box ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#title {
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	display: flex;
+	overflow: hidden;
+}
+#title li {
+	display: block;
+	box-sizing: border-box;
+	width: calc(100% / 2);
+	text-align: center;
+	padding: 10px 0px;
+	background-color: white;
+	color: black;
+	border-right: 1px solid white;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+#title .action {
+	border-bottom: 2px solid #31a0e0;
+	color: #31a0e0;
+}
+#con {
+	padding: 0.5em 0px;
+}
+#con>li {
+	display: none;
+}
+#con .now {
+	display: block;
+}
+#con .now>p{
+    text-indent: 2em;
+    font-size: 1.05em;
+}
+.dise{
+    display: block;
+}
+.undise{
+    display: none;
+}
+/**********************/
+
+/*********新手入门************/
+#main #con>li:nth-of-type(1)>div>div:nth-of-type(2){
+    padding: 0px 10px;
+}
+#main #con>li:nth-of-type(1)>div>div:nth-of-type(2) h4{
+    margin: 10px 0px;
+    border-bottom: 1px solid #808080;
+}
+#main #con>li:nth-of-type(1)>div>div:nth-of-type(2) p{
+    margin: 0px;
+    padding: 10px 0px;
+    color: #808080;
+    border-bottom: 1px dotted #808080;
+}
+/****************************/
+
+/**********最新攻略***********/
+#main #con>li:nth-of-type(2)>div a{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+#main #con>li:nth-of-type(2)>div img{
+    width: 100%;
+    height: 7em;
+}
+#main #con>li:nth-of-type(2)>div .ui-block-a{
+    padding:0px 5px;
+}
+#main #con>li:nth-of-type(2)>div .ui-block-b{
+    padding: 0px 5px;
+}
+#main #con>li:nth-of-type(2)>div p{
+    overflow:hidden; 
+    text-overflow:ellipsis;  
+    display:-webkit-box;     
+    -webkit-box-orient:vertical;  
+    -webkit-line-clamp:2; 
+}
+/****************************/
+
+/********轮播*********/
+.ui-content{
+    padding: 0px!important;
+}
+#lunbo {
+	position: relative;
+}
+#imghe {
+	width: 100%;
+	opacity: 0;
+}
+
+#igs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	width: 100%;
+	font-size: 0px;
+}
+
+#igs img {
+	width: 100%;
+}
+.ui-alt-icon.ui-btn:after{
+	background-color: #e0eefe!important;
+}
+/****************************/
+
+/*******footer导航栏*********/
+
+#footer {
+    position: fixed;
+	overflow: hidden;
+	border-top: 1px solid gray;
+}
+
+#navbar a,
+#footer a {
+	border: none;
+	margin: 0px;
+	float: left;
+	padding: 3em 0px 5px 0px;
+	width: calc(100% / 3);
+}
+
+#footer .ui-btn-icon-top:after,
+#navbar .ui-btn-icon-top:after {
+	margin-left: -16px;
+}
+
+#footer a:nth-child(1)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer a:nth-child(2)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer a:nth-child(3)::after {
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/qbz.png);
+    background-color: transparent;
+}
+
+#footer .ui-btn-icon-top:after,
+#navbar .ui-btn-icon-top:after {
+	top: 2px;
+}

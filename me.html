@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/me.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/me.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="pageone" data-role="page">
+			<div data-role="main" id="main">
+				<div>
+					<img src="img/me.png">
+					<div>
+						<img src="img/tx.jpg">
+					</div>
+				</div>
+				<div id="box">
+					<ul id="title">
+						<li class="action">游戏动态</li>
+						<li>我关注的</li>
+						<li>热门话题</li>
+					</ul>
+					<ul id="con">
+						<li class="now">
+							<form method="post" action="demoform.asp">
+								<div class="ui-field-contain" style="margin: 0px 10px;">
+									<label for="search">搜索：</label>
+									<input type="search" name="search" id="search" placeholder="搜索动态内容...">
+								</div>
+							</form>
+
+							<div class="dt">
+								<div>
+									<div class="tx1">
+										<div><img src="img/tx.jpg"></div>
+										<p>怪我喽</p>
+									</div>
+									<a href="#">
+										<p>关注</p>
+									</a>
+								</div>
+								<a href="#">
+									<img src="img/gl_1.jpg">
+									<p>麻烦各位老铁了，给我点下赞，只要5个就够了</p>
+								</a>
+								<p>11-11 11:52</p>
+							</div>
+							<div class="dt">
+								<div>
+									<div class="tx1">
+										<div><img src="img/ld_6.jpg"></div>
+										<p>冻死的企鹅</p>
+									</div>
+									<a href="#">
+										<p>关注</p>
+									</a>
+								</div>
+								<a href="#">
+									<img src="img/lunbo_2.jpg">
+									<p>求问这个任务乍做啊？</p>
+								</a>
+								<p>10-27 13:39</p>
+							</div>
+							<div class="dt">
+								<div>
+									<div class="tx1">
+										<div><img src="img/Fortnite.jpg"></div>
+										<p>我TM</p>
+									</div>
+									<a href="#">
+										<p>关注</p>
+									</a>
+								</div>
+								<a href="#">
+									<img src="img/gl_4.jpg">
+									<p>啊啊啊啊啊啊啊啊</p>
+								</a>
+								<p>10-27 13:39</p>
+							</div>
+						</li>
+						<li>
+							<ul data-role="listview" data-autodividers="true" data-inset="true">
+								<li><a href="#"><img src="img/Fortnite.jpg" alt="app" class="ui-li-icon">app</a></li>
+								<li><a href="#"><img src="img/tx.jpg" alt="iu" class="ui-li-icon">good</a></li>
+								<li><a href="#"><img src="img/ld_4.jpg" alt="fuck" class="ui-li-icon">fuck</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<div><img src="img/ld_2.jpg"></div>
+								<div>
+									<h3>#锄大地跨年#</h3>
+									<p>锄大地跨年</p>
+									<p>995人参与</p>
+								</div>
+							</a>
+							<a href="#">
+								<div><img src="img/gl2_4.jpg"></div>
+								<div>
+									<h3>#身边的锄大地#</h3>
+									<p>身边的锄大地</p>
+									<p>255人参与</p>
+								</div>
+							</a>
+							<a href="#">
+								<div><img src="img/ld_3.jpg"></div>
+								<div>
+									<h3>#感恩节送祝福#</h3>
+									<p>感恩节送祝福</p>
+									<p>155人参与</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" id="footer">
+				<div data-role="navbar">
+					<a href="index.html" class="ui-btn ui-icon-carat-l  ui-btn-icon-top  ui-alt-icon" data-ajax="false">情报站</a>
+					<a href="Strategy.html" class="ui-btn ui-icon-carat-l  ui-btn-icon-top  ui-alt-icon" data-ajax="false">攻略中心</a>
+					<a href="me.html" class="ui-btn ui-icon-carat-l  ui-btn-icon-top  ui-alt-icon" data-ajax="false">我的</a>
+				</div>
+			</div>
+			<a href="#pagetwo" data-ajax="false">+</a>
+		</div>
+        
+        <div data-role="page" id="pagetwo">
+          <div data-role="header">
+			  <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="flow">返回</a>
+            <h1>发表你的动态</h1>
+          </div>
+        
+          <div data-role="main" class="ui-content">
+			  <el-upload
+			    class="upload-demo"
+			    action="https://jsonplaceholder.typicode.com/posts/"
+			    :on-preview="handlePreview"
+			    :on-remove="handleRemove"
+			    :before-remove="beforeRemove"
+			    multiple
+			    :limit="3"
+			    :on-exceed="handleExceed"
+			    :file-list="fileList">
+			    <el-button size="small" type="primary">点击上传</el-button>
+			    <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+			  </el-upload>
+			  <script>
+			    export default {
+			      data() {
+			        return {
+			          fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+			        };
+			      },
+			      methods: {
+			        handleRemove(file, fileList) {
+			          console.log(file, fileList);
+			        },
+			        handlePreview(file) {
+			          console.log(file);
+			        },
+			        handleExceed(files, fileList) {
+			          this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+			        },
+			        beforeRemove(file, fileList) {
+			          return this.$confirm(`确定移除 ${ file.name }？`);
+			        }
+			      }
+			    }
+			  </script>
+           	<form method="post">
+				
+           	       <div class="ui-field-contain">
+           	        <label for="info">附加信息:</label>
+           	        <textarea name="addinfo" id="info"></textarea>
+           	      </div>
+           	      <input type="submit" data-inline="true" value="发布">
+           	    </form> 
+          </div>
+        </div> 
+	</body>
+</html>
